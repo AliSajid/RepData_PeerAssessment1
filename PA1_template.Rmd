@@ -36,9 +36,10 @@ Here we calculate the mean total number of steps taken in a day across the entir
 ```{r histogram_generation_and_mean}
 steps.per.day <- with(activity.data, aggregate(steps, by = list(date), FUN = sum, na.rm = T))
 names(steps.per.day) <- c("date", "steps")
-histplot <- ggplot(steps.per.day, aes(x = steps, colour = "red", fill = "blue", alpha = 0.2)) +
+histplot <- ggplot(steps.per.day, aes(x = steps, colour = "red", fill = "red", alpha = 0.2)) +
             ggtitle("Histogram of daily steps") +
             xlab("Steps (binwidth 2000)") +
+            ylab("Count") +
             geom_histogram(binwidth = 2000) + 
             theme(legend.position = "none")
 histplot
@@ -110,9 +111,10 @@ activity.imputed$steps.y <- NULL
 #histogram with new dataframe
 total.steps.per.day <- aggregate(x = activity.imputed$steps , by = list(activity.imputed$date), FUN = sum ,na.rm=TRUE)
 names(total.steps.per.day) <- c("date","steps")
-histplot.impute <- ggplot(total.steps.per.day,aes(x = steps, colour = "red")) +
+histplot.impute <- ggplot(total.steps.per.day,aes(x = steps, colour = "red", fill = "red", alpha = 0.2)) +
             ggtitle("Histogram of daily steps after imputation") +
             xlab("Steps (binwidth 2000)") +
+            ylab("Count") +
             geom_histogram(binwidth = 2000) +
             theme(legend.position = "none")
 histplot.impute
