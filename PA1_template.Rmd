@@ -89,6 +89,7 @@ max.interval
 ```
 
 The interval with the maximum number of steps in a single day, averaged across intervals is `r sprintf("%d", max.interval)`.
+
 ## Imputing missing values
 ```{r row_count}
 #total number of missing values in the dataset
