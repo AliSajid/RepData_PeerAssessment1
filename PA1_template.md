@@ -41,7 +41,7 @@ histplot <- ggplot(steps.per.day, aes(x = steps, colour = "red", fill = "red", a
 histplot
 ```
 
-![](PA1_template_files/figure-html/histogram_generation_and_mean-1.png) 
+![](PA1_template_files/figure-html/histogram_generation_and_mean-1.png)
 
 We calculate the mean of total steps taken over the time period, ignoring the missing values.
 
@@ -89,7 +89,7 @@ avg.steps <- ggplot(average.steps.per.interval, aes(interval, steps)) +
 avg.steps
 ```
 
-![](PA1_template_files/figure-html/average_daily_pattern-1.png) 
+![](PA1_template_files/figure-html/average_daily_pattern-1.png)
 
 We also calculate the 5-minute interval with the highest value.
 
@@ -105,6 +105,7 @@ max.interval
 ```
 
 The interval with the maximum number of steps in a single day, averaged across intervals is 835.
+
 ## Imputing missing values
 
 ```r
@@ -138,7 +139,7 @@ histplot.impute <- ggplot(total.steps.per.day,aes(x = steps, colour = "red", fil
 histplot.impute
 ```
 
-![](PA1_template_files/figure-html/imputed_data_and_plot-1.png) 
+![](PA1_template_files/figure-html/imputed_data_and_plot-1.png)
 
 Once again, we calculate the mean of total steps taken over the time period, ignoring the missing values.
 
@@ -190,4 +191,4 @@ avg.step.line <- ggplot(average.steps.per.interval.by.weekday, aes(interval, ste
 avg.step.line
 ```
 
-![](PA1_template_files/figure-html/weekday_addition-1.png) 
+![](PA1_template_files/figure-html/weekday_addition-1.png)
